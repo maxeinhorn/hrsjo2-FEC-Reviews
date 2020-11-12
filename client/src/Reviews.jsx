@@ -1,8 +1,10 @@
 import React from "react";
 
-const Reviews = (props) => (
+const Reviews = () => (
   <div>
-
+  Can you see me?
   </div>
 
 )
+
+export default Reviews;

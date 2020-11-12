@@ -14,6 +14,9 @@ class App extends React.Component {
     axios.get('/api')
     .then((response) => {
       console.log(response);
+      this.setState({
+        data: response.data
+      })
     })
     .catch((err) => {
       console.log(err);

@@ -10,13 +10,10 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.get('/api', (req, res) => {
-  // console.log(db.connection.query);
-  // res.send('BACKING UP')
   db.connection.query('SELECT * FROM reviews', (err, result) => {
     if (err) {
-      console.log('THE ERROR IS HERE ', err)
+      console.log(err)
     }
-    console.log('Does success case work?');
     res.send(result)
   })
 })
